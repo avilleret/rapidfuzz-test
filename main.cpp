@@ -1,4 +1,4 @@
-#include <fuzz.hpp>
+#include <rapidfuzz/fuzz.hpp>
 
 int main(int,char**)
 {
