@@ -12,3 +12,6 @@ FetchContent_MakeAvailable(rapidfuzz)
 
 add_executable(foo main.cpp)
 target_link_libraries(foo PRIVATE rapidfuzz::rapidfuzz)
+
+add_executable(foo-staticallylinked main.cpp)
+target_link_libraries(foo-staticallylinked PRIVATE rapidfuzz::rapidfuzz-static)
