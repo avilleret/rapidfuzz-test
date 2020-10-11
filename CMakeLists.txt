@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8)
 project(RapidFuzz-test)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 11)
 
 include(FetchContent)
 FetchContent_Declare( 
@@ -12,6 +12,3 @@ FetchContent_MakeAvailable(rapidfuzz)
 
 add_executable(foo main.cpp)
 target_link_libraries(foo PRIVATE rapidfuzz::rapidfuzz)
-
-add_executable(foo-staticallylinked main.cpp)
-target_link_libraries(foo-staticallylinked PRIVATE rapidfuzz::rapidfuzz-static)
